@@ -7,3 +7,18 @@
 	line-height: 1.1;
 	color: $accentColor;
 }
+
+.body-block {
+	padding: toRem(48);
+	border: toRem(1) solid rgba(218, 197, 167, 0.15);
+	border-radius: toRem(2);
+	background: rgba(218, 197, 167, 0.05);
+	& > *:not(:last-child) {
+		margin-bottom: toRem(16);
+	}
+}
+
+.warning {
+	color: rgb(255, 0, 0);
+	text-transform: uppercase;
+}

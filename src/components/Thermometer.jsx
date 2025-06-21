@@ -28,8 +28,15 @@ function Thermometer() {
 		<section className="thermometer">
 			<div className="thermometer-container">
 				<h2 className="thermometer-title title">Thermometer</h2>
-				<div className={`thermometer-body ${getClassStyle()}`}>
-					<input placeholder="temperature" value={temperature} onChange={handleTemperatureChange} type="text" className="thermometer-input input" />
+				<div className={`thermometer-body body-block ${getClassStyle()}`}>
+					<input
+						type="text"
+						name="thermometer"
+						value={temperature}
+						onChange={handleTemperatureChange}
+						className="thermometer-input input"
+						placeholder="temperature"
+					/>
 				</div>
 			</div>
 		</section>

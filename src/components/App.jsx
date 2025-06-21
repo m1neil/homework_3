@@ -1,5 +1,6 @@
 import CentimeterConverter from './CentimeterConverter';
-import Thermometer from './thermometer';
+import Speedometer from './Speedometer';
+import Thermometer from './Thermometer';
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
 		<>
 			<CentimeterConverter />
 			<Thermometer />
+			<Speedometer />
 		</>
 	)
 }

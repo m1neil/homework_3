@@ -1,29 +1,27 @@
-@use "./converter" as *;
-@use "../includes/mixins" as *;
+@use "../includes/" as *;
 
 .thermometer {
 	padding-block: toRem(25);
 	&-title {
 		&:not(:last-child) {
-			margin-bottom: toRem(25);
+			margin-bottom: toRem(30);
 		}
 	}
 	&-container {
 	}
 	&-body {
-		@extend .converter-body;
 		transition: background-color 0.3s;
 		&.-red {
-			background-color: rgba(255, 0, 0, 0.1);
+			background-color: $red-transparent;
 		}
 		&.-green {
-			background-color: rgba(0, 255, 0, 0.1);
+			background-color: $green-transparent;
 		}
 		&.-blue {
-			background-color: rgba(0, 0, 255, 0.1);
+			background-color: $blue-transparent;
 		}
 		&.-white {
-			background-color: rgba(255, 255, 255, 0.1);
+			background-color: $white-transparent;
 		}
 	}
 }

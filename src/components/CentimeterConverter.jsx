@@ -17,9 +17,10 @@ function CentimeterConverter() {
 		<section className="converter">
 			<div className="converter-container">
 				<h2 className="converter-title title">Converter centimeters</h2>
-				<div className="converter-body">
+				<div className="converter-body body-block">
 					<input
 						type="text"
+						name="centimeters"
 						value={centimeters}
 						onChange={handleCentimetersChange}
 						placeholder="Centimeters"

@@ -8,7 +8,9 @@
 	letter-spacing: 0.12rem;
 	color: #dac5a7;
 	outline: none;
-	transition: border-color 0.3s;
+	transition:
+		border-color 0.3s,
+		opacity 0.3s;
 	&::placeholder {
 		transition: opacity 0.3s;
 		text-transform: uppercase;
@@ -20,5 +22,8 @@
 		&::placeholder {
 			opacity: 0;
 		}
+	}
+	&:disabled {
+		opacity: 0.5;
 	}
 }
