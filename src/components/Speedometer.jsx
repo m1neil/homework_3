@@ -32,9 +32,6 @@ function Speedometer() {
 	)
 	const classStyleInput = getClassStylesInput(speedPercent)
 
-	console.log(speedPercent);
-
-
 	let contentWarning
 	if (speedPercent && speedPercent > 90)
 		contentWarning = <div className="warning">Attention!!!</div>

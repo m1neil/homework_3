@@ -1,0 +1,57 @@
+@use "../includes/" as *;
+
+.sapper {
+	padding-block: toRem(25);
+	&-container {
+	}
+	&-title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(7);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&-item {
+		background-color: rgba(255, 255, 255, 0.2);
+		width: toRem(30);
+		aspect-ratio: 1;
+		&.-mine {
+			background-color: rgba(255, 0, 0, 0.2);
+		}
+		&.-empty {
+			background-color: rgba(0, 255, 0, 0.2);
+		}
+	}
+	&-actions {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: toRem(15);
+	}
+	&-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: toRem(10);
+		&::before {
+			content: "";
+			background: url("../assets/icons/arrow.svg") center / contain no-repeat;
+			width: toRem(15);
+			aspect-ratio: 1;
+			flex-shrink: 0;
+		}
+		&-prev {
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+		&-next {
+			flex-direction: row-reverse;
+		}
+	}
+}
