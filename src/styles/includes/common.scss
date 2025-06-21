@@ -1,0 +1,9 @@
+@use "../includes/variables" as *;
+@use "../includes/mixins" as *;
+
+.title {
+	font-weight: 300;
+	font-size: toRem(48);
+	line-height: 1.1;
+	color: $accentColor;
+}

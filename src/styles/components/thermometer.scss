@@ -1,0 +1,29 @@
+@use "./converter" as *;
+@use "../includes/mixins" as *;
+
+.thermometer {
+	padding-block: toRem(25);
+	&-title {
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+	&-container {
+	}
+	&-body {
+		@extend .converter-body;
+		transition: background-color 0.3s;
+		&.-red {
+			background-color: rgba(255, 0, 0, 0.1);
+		}
+		&.-green {
+			background-color: rgba(0, 255, 0, 0.1);
+		}
+		&.-blue {
+			background-color: rgba(0, 0, 255, 0.1);
+		}
+		&.-white {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+}
