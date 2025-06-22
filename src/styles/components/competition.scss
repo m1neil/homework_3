@@ -1,0 +1,76 @@
+@use "../includes/" as *;
+
+.competition {
+	&-container {
+	}
+	&-title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&-body {
+		display: flex;
+		column-gap: toRem(50);
+	}
+	&-column {
+		flex: 1 1 toRem(20);
+	}
+	&-label {
+		font-weight: 300;
+		font-size: toRem(28);
+		line-height: 1.2;
+		letter-spacing: 0.03rem;
+		color: #dac5a7;
+		margin-bottom: toRem(5);
+	}
+	&-info {
+		margin-top: toRem(21);
+		font-weight: 400;
+		font-size: toRem(20);
+		color: rgba(218, 197, 167, 0.6);
+	}
+	&-list {
+	}
+	&-list-item {
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid rgba(218, 197, 167, 0.15);
+		}
+	}
+	&-list-button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: toRem(20);
+		line-height: 1.6;
+		letter-spacing: 0.12rem;
+		text-transform: uppercase;
+		color: #dac5a7;
+		width: 100%;
+		padding-block: toRem(15);
+		transition: color 0.3s;
+		&::after {
+			content: "";
+			width: toRem(15);
+			aspect-ratio: 1;
+			background: url("../assets/icons/arrow-sand.svg") center / contain no-repeat;
+			flex-shrink: 0;
+			transition: transform 0.3s;
+		}
+		&.-reverse {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgba(218, 197, 167, 0.6);
+				&::after {
+					transform: translateX(toRem(10));
+				}
+			}
+			&.-reverse:hover::after {
+				transform: translateX(toRem(-10)) rotate(-180deg);
+			}
+		}
+	}
+}
