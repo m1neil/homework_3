@@ -1,5 +1,6 @@
 import CentimeterConverter from './CentimeterConverter';
 import CompetitionManager from './CompetitionManager';
+import DancingManager from './DancingManager';
 import Sapper from './Sapper';
 import Speedometer from './Speedometer';
 import Thermometer from './Thermometer';
@@ -29,6 +30,20 @@ function App() {
 		{ id: 8, firstName: "Ірина", lastName: "Литвин" },
 	]
 
+	const boys = [
+		{ id: 1, firstName: "Олексій", lastName: "Коваленко" },
+		{ id: 2, firstName: "Ігор", lastName: "Мельник" },
+		{ id: 3, firstName: "Сергій", lastName: "Бондар" },
+		{ id: 4, firstName: "Вадим", lastName: "Гончаренко" },
+	];
+
+	const girls = [
+		{ id: 1, firstName: "Анна", lastName: "Іванова" },
+		{ id: 2, firstName: "Марія", lastName: "Петренко" },
+		{ id: 3, firstName: "Олена", lastName: "Сидорова" },
+		{ id: 4, firstName: "Ірина", lastName: "Литвин" },
+	];
+
 
 	return (
 		<>
@@ -37,6 +52,7 @@ function App() {
 			<Speedometer />
 			<Sapper cells={cells} />
 			<CompetitionManager listCandidates={listCandidates} />
+			<DancingManager boys={boys} girls={girls} />
 		</>
 	)
 }
