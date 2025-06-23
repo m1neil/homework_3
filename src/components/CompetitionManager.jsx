@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function CompetitionManager({ listCandidates = [] }) {
-	const [candidates, setCandidates] = useState(listCandidates.sort(sortList))
+	const [candidates, setCandidates] = useState(() => listCandidates.sort(sortList))
 	const [athletesCompetition, setAthletesCompetition] = useState([])
 
 	const TYPE_CANDIDATES_LIST = 'candidates-list'

@@ -1,0 +1,63 @@
+@use "../includes/" as *;
+
+.dancing {
+	padding-block: toRem(25);
+	&-container {
+	}
+	&-title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&-body {
+	}
+	&-row {
+		display: flex;
+		column-gap: toRem(50);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&-column {
+		flex: 1 1 toRem(20);
+	}
+	&-label {
+		font-weight: 300;
+		font-size: toRem(25);
+		line-height: 1.4;
+		letter-spacing: 0.05rem;
+		color: #dac5a7;
+	}
+	&-list {
+	}
+	&-list-item {
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid rgba(218, 197, 167, 0.15);
+		}
+	}
+	&-list-button {
+		color: #dac5a7;
+		width: 100%;
+		text-align: left;
+		padding-block: toRem(15);
+		&.-selected {
+			color: rgba(218, 197, 167, 0.6);
+			pointer-events: none;
+		}
+	}
+	button.dancing-list-button {
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				&:hover {
+					color: rgba(218, 197, 167, 0.6);
+				}
+			}
+		}
+	}
+	&-info {
+		padding-block: toRem(15);
+		font-weight: 400;
+		color: rgba(218, 197, 167, 0.6);
+	}
+}
