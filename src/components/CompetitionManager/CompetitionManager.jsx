@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CompetitionList from "./CompetitionList"
 
 function CompetitionManager({ listCandidates = [] }) {
 	const [candidates, setCandidates] = useState(() => listCandidates.sort(sortList))
@@ -9,10 +10,10 @@ function CompetitionManager({ listCandidates = [] }) {
 
 	// methods ========================================================
 
-	const handleListsChange = (target, idCandidate) => {
-		const typeList = target.closest('.competition-list').getAttribute('data-type')
+	const handleListsChange = (idCandidate, typeList) => {
 		try {
-			typeList === TYPE_CANDIDATES_LIST ? chooseCandidate(idCandidate) : cancelCandidacy(idCandidate)
+			typeList === TYPE_CANDIDATES_LIST ?
+				chooseCandidate(idCandidate) : cancelCandidacy(idCandidate)
 		} catch (error) {
 			console.error(error.message)
 		}
@@ -44,22 +45,6 @@ function CompetitionManager({ listCandidates = [] }) {
 		return a.lastName.localeCompare(b.lastName, 'uk')
 	}
 
-	const createList = (list, typeList) => {
-		if (!list.length)
-			return <div className="competition-info">List is empty...</div>
-
-		const classButton = typeList === 'athletes-competition' ? 'competition-list-button -reverse' : 'competition-list-button'
-		const itemsList = list.map(({ id, firstName, lastName }) => (
-			<li key={id} className="competition-list-item">
-				<button onClick={e => handleListsChange(e.target, id)} className={classButton}>
-					<span>{lastName} {firstName}</span>
-				</button>
-			</li>
-		))
-
-		return <ul data-type={typeList} className="competition-list">{itemsList}</ul>
-	}
-
 	return (
 		<div className="competition">
 			<div className="competition-container">
@@ -67,11 +52,19 @@ function CompetitionManager({ listCandidates = [] }) {
 				<div className="competition-body body-block">
 					<div className="competition-column">
 						<h3 className="competition-label">General list</h3>
-						{createList(candidates, TYPE_CANDIDATES_LIST)}
+						<CompetitionList
+							list={candidates}
+							typeList={TYPE_CANDIDATES_LIST}
+							handleListsChange={handleListsChange}
+						/>
 					</div>
 					<div className="competition-column">
 						<h3 className="competition-label">Selected for competition</h3>
-						{createList(athletesCompetition, TYPE_ATHLETES_COMPETITION_LIST)}
+						<CompetitionList
+							list={athletesCompetition}
+							typeList={TYPE_ATHLETES_COMPETITION_LIST}
+							handleListsChange={handleListsChange}
+						/>
 					</div>
 				</div>
 			</div>
