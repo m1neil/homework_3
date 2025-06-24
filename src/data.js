@@ -52,12 +52,12 @@ export const employees = [
 export const cars = [
 	{ id: 1, brand: "Toyota", year: 2018, price: 15000 },
 	{ id: 2, brand: "BMW", year: 2020, price: 28000 },
-	{ id: 3, brand: "Tesla", year: 2022, price: 45000 },
-	{ id: 4, brand: "Honda", year: 2017, price: 13000 },
-	{ id: 5, brand: "Ford", year: 2019, price: 17000 },
-	{ id: 6, brand: "Mercedes", year: 2021, price: 35000 },
-	{ id: 7, brand: "Volkswagen", year: 2016, price: 12000 },
-	{ id: 8, brand: "Audi", year: 2020, price: 29000 },
-	{ id: 9, brand: "Hyundai", year: 2018, price: 14000 },
-	{ id: 10, brand: "Kia", year: 2019, price: 13500 }
+	{ id: 3, brand: "Toyota", year: 2021, price: 17500 },
+	{ id: 4, brand: "BMW", year: 2019, price: 26000 },
+	{ id: 5, brand: "Tesla", year: 2022, price: 45000 },
+	{ id: 6, brand: "Honda", year: 2017, price: 13000 },
+	{ id: 7, brand: "Tesla", year: 2023, price: 48000 },
+	{ id: 8, brand: "Honda", year: 2020, price: 14500 },
+	{ id: 9, brand: "Ford", year: 2019, price: 17000 },
+	{ id: 10, brand: "Ford", year: 2018, price: 16000 }
 ]

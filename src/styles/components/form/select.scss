@@ -14,7 +14,7 @@ select,
 	text-transform: uppercase;
 	border: toRem(1) solid rgba(218, 197, 167, 0.15);
 	border-radius: toRem(2);
-	padding: toRem(14) toRem(24);
+	padding: toRem(14) toRem(20);
 	transition: background-color 0.3s;
 	background-color: rgba(218, 197, 167, 0.05);
 	&::picker-icon {
@@ -34,7 +34,7 @@ select,
 		}
 	}
 	option {
-		padding: toRem(12) toRem(10);
+		padding: toRem(12) toRem(20);
 		background-color: rgba(218, 197, 167, 0.05);
 		transition:
 			background-color 0.3s,
@@ -50,12 +50,6 @@ select,
 			aspect-ratio: 1;
 			flex-shrink: 0;
 			background: url("../assets/icons/arrow-checkmark.svg") center / contain no-repeat;
-		}
-		&:first-child {
-			border-radius: toRem(2) toRem(2) 0 0;
-		}
-		&:last-child {
-			border-radius: 0 0 toRem(2) toRem(2);
 		}
 		&:not(:last-child) {
 			border-bottom: toRem(1) solid rgba(218, 197, 167, 0.15);
@@ -86,9 +80,9 @@ select,
 	color: $mainColor;
 	border-radius: toRem(2);
 	opacity: 0;
-	bottom: calc(anchor(top) + toRem(10));
+	top: calc(anchor(bottom) + toRem(10));
 	left: 0;
-	transform: translateY(toRem(-25));
+	transform: translateY(toRem(25));
 	max-height: toRem(300);
 	padding-inline-end: toRem(5);
 	scrollbar-width: thin;
@@ -101,6 +95,6 @@ select,
 @starting-style {
 	::picker(select):popover-open {
 		opacity: 0;
-		transform: translateY(toRem(-25));
+		transform: translateY(toRem(25));
 	}
 }

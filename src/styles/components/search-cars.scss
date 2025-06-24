@@ -2,9 +2,11 @@
 
 .search-car {
 	padding-block: toRem(25);
+	min-height: toRem(600);
 	&-container {
 	}
 	&-title {
+		margin-bottom: toRem(30);
 	}
 	&-body {
 	}
@@ -26,5 +28,15 @@
 		}
 	}
 	&-select {
+	}
+	&-list {
+	}
+	&-list-item {
+		color: $accentColor;
+		&:not(:last-child) {
+			padding-bottom: toRem(12);
+			margin-bottom: toRem(12);
+			border-bottom: toRem(1) solid rgba(218, 197, 167, 0.15);
+		}
 	}
 }
