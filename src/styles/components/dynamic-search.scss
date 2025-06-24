@@ -1,0 +1,39 @@
+@use "../includes/" as *;
+
+.dynamic-search {
+	padding-block: toRem(25);
+	&-search-container {
+	}
+	&-search-title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&-search-body {
+	}
+	&-search-form {
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+	&-label {
+		font-weight: 300;
+		color: $accentColor;
+		line-height: 1.4;
+		letter-spacing: 0.05rem;
+		font-size: toRem(25);
+	}
+	&-list {
+	}
+	&-list-item {
+		font-weight: 300;
+		line-height: 1.4;
+		letter-spacing: 0.05rem;
+		color: #dac5a7;
+		&:not(:last-child) {
+			padding-bottom: toRem(10);
+			margin-bottom: toRem(10);
+			border-bottom: toRem(1) solid rgba(218, 197, 167, 0.15);
+		}
+	}
+}

@@ -2,6 +2,10 @@
 @use "./includes/variables" as *;
 @use "./includes/mixins" as *;
 
+html {
+	scrollbar-color: #dac5a7 #dac5a70d;
+}
+
 body {
 	background-color: $backgroundColor;
 	// scrollbar-gutter: stable;

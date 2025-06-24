@@ -1,0 +1,106 @@
+@use "../../includes/" as *;
+
+select,
+::picker(select) {
+	appearance: base-select;
+}
+
+.select {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	column-gap: toRem(15);
+	font-size: toRem(17);
+	text-transform: uppercase;
+	border: toRem(1) solid rgba(218, 197, 167, 0.15);
+	border-radius: toRem(2);
+	padding: toRem(14) toRem(24);
+	transition: background-color 0.3s;
+	background-color: rgba(218, 197, 167, 0.05);
+	&::picker-icon {
+		content: "";
+		transition: rotate 0.3s;
+		width: toRem(15);
+		aspect-ratio: 1;
+		flex-shrink: 0;
+		background: url("../assets/icons/arrow-down.svg") center/contain no-repeat;
+	}
+	&:open::picker-icon {
+		rotate: 180deg;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(218, 197, 167, 0.1);
+		}
+	}
+	option {
+		padding: toRem(12) toRem(10);
+		background-color: rgba(218, 197, 167, 0.05);
+		transition:
+			background-color 0.3s,
+			color 0.3s;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: toRem(10);
+		&::checkmark {
+			content: "";
+			width: toRem(15);
+			aspect-ratio: 1;
+			flex-shrink: 0;
+			background: url("../assets/icons/arrow-checkmark.svg") center / contain no-repeat;
+		}
+		&:first-child {
+			border-radius: toRem(2) toRem(2) 0 0;
+		}
+		&:last-child {
+			border-radius: 0 0 toRem(2) toRem(2);
+		}
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid rgba(218, 197, 167, 0.15);
+		}
+		&:checked {
+			background-color: $accentColor;
+			color: #0e0e0e;
+		}
+		&:disabled {
+			cursor: default;
+			justify-content: flex-end;
+			&::checkmark {
+				display: none;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover:not(:checked, :disabled) {
+				background-color: rgba(218, 197, 167, 0.15);
+			}
+		}
+	}
+}
+
+::picker(select) {
+	transition: all 0.3s allow-discrete;
+	border: toRem(1) solid rgba(218, 197, 167, 0.15);
+	background-color: #0e0e0e;
+	color: $mainColor;
+	border-radius: toRem(2);
+	opacity: 0;
+	bottom: calc(anchor(top) + toRem(10));
+	left: 0;
+	transform: translateY(toRem(-25));
+	max-height: toRem(300);
+	padding-inline-end: toRem(5);
+	scrollbar-width: thin;
+	&:popover-open {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@starting-style {
+	::picker(select):popover-open {
+		opacity: 0;
+		transform: translateY(toRem(-25));
+	}
+}

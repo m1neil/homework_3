@@ -1,2 +1,27 @@
+@use "../../includes/" as *;
 @forward "./input";
 @forward "./button";
+@forward "./select";
+
+.form {
+	&-row {
+		display: flex;
+	}
+	&-input {
+		border-radius: toRem(2) 0 0 toRem(2);
+	}
+	&-search {
+		width: toRem(53);
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 toRem(2) toRem(2) 0;
+		border-right: none;
+		img {
+			width: toRem(30);
+			aspect-ratio: 1;
+			object-fit: contain;
+		}
+	}
+}

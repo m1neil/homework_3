@@ -1,0 +1,30 @@
+@use "../includes/" as *;
+
+.search-car {
+	padding-block: toRem(25);
+	&-container {
+	}
+	&-title {
+	}
+	&-body {
+	}
+	&-row {
+		display: flex;
+		column-gap: toRem(50);
+	}
+	&-column {
+		flex: 1 1 toRem(20);
+	}
+	&-label {
+		font-weight: 300;
+		font-size: toRem(24);
+		line-height: 1.3;
+		letter-spacing: 0.04rem;
+		color: #dac5a7;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&-select {
+	}
+}
