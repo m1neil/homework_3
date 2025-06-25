@@ -51,7 +51,7 @@ function CompetitionManager({ listCandidates = [] }) {
 				<h2 className="competition-title title">Competition manager</h2>
 				<div className="competition-body body-block">
 					<div className="competition-column">
-						<h3 className="competition-label">General list</h3>
+						<h3 className="competition-label label">General list</h3>
 						<CompetitionList
 							list={candidates}
 							typeList={TYPE_CANDIDATES_LIST}
@@ -59,7 +59,7 @@ function CompetitionManager({ listCandidates = [] }) {
 						/>
 					</div>
 					<div className="competition-column">
-						<h3 className="competition-label">Selected for competition</h3>
+						<h3 className="competition-label label">Selected for competition</h3>
 						<CompetitionList
 							list={athletesCompetition}
 							typeList={TYPE_ATHLETES_COMPETITION_LIST}

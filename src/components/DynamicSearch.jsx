@@ -52,7 +52,7 @@ function DynamicSearch({ employees }) {
 							onChange={handleSearchTextChange}
 						/>
 					</div>
-					<div className="dynamic-search-label">Employees</div>
+					<div className="dynamic-search-label label">Employees</div>
 					<ul className="dynamic-search-list">
 						{createList(searchEmployees())}
 					</ul>

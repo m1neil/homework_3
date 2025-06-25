@@ -71,7 +71,7 @@ function DancingManager({ boys, girls }) {
 				<div className="dancing-body body-block">
 					<div className="dancing-row">
 						<div className="dancing-column">
-							<h3 className="dancing-label">Boys</h3>
+							<h3 className="dancing-label label">Boys</h3>
 							<DancingList
 								gender="male"
 								list={listBoys}
@@ -80,7 +80,7 @@ function DancingManager({ boys, girls }) {
 							/>
 						</div>
 						<div className="dancing-column">
-							<h3 className="dancing-label">Girls</h3>
+							<h3 className="dancing-label label">Girls</h3>
 							<DancingList
 								gender="female"
 								list={listGirls}
@@ -97,7 +97,7 @@ function DancingManager({ boys, girls }) {
 					>Add a pair
 					</button>
 					<div className="dancing-column">
-						<h3 className="dancing-label">Selected pairs</h3>
+						<h3 className="dancing-label label">Selected pairs</h3>
 						{createListPairs()}
 					</div>
 				</div>

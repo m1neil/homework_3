@@ -61,3 +61,11 @@ export const cars = [
 	{ id: 9, brand: "Ford", year: 2019, price: 17000 },
 	{ id: 10, brand: "Ford", year: 2018, price: 16000 }
 ]
+
+export const words = [
+	{ id: 0, en: 'table', ua: 'стіл' },
+	{ id: 1, en: 'car', ua: 'автомобіль' },
+	{ id: 2, en: 'bus', ua: 'автобус' },
+	{ id: 3, en: 'human', ua: 'людина' },
+	{ id: 4, en: 'boy', ua: 'хлопець' },
+]

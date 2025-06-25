@@ -1,19 +1,21 @@
-import CentimeterConverter from './CentimeterConverter';
-import CompetitionManager from './CompetitionManager/CompetitionManager';
-import DancingManager from './DancingManager/DancingManager';
-import Sapper from './Sapper';
-import Speedometer from './Speedometer';
-import Thermometer from './Thermometer';
-import DynamicSearch from './DynamicSearch';
+import CentimeterConverter from './CentimeterConverter'
+import CompetitionManager from './CompetitionManager/CompetitionManager'
+import DancingManager from './DancingManager/DancingManager'
+import Sapper from './Sapper'
+import Speedometer from './Speedometer'
+import Thermometer from './Thermometer'
+import DynamicSearch from './DynamicSearch'
+import SearchCars from './SearchCars'
 import {
 	cells,
 	listCandidates,
 	boys,
 	girls,
 	employees,
-	cars
+	cars,
+	words
 } from '../data';
-import SearchCars from './SearchCars';
+import Translator from './Translator/Translator'
 
 function App() {
 	return (
@@ -26,6 +28,7 @@ function App() {
 			<DancingManager boys={boys} girls={girls} />
 			<DynamicSearch employees={employees} />
 			<SearchCars carsList={cars} />
+			<Translator words={words} />
 		</>
 	)
 }

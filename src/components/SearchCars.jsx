@@ -33,7 +33,8 @@ function SearchCars({ carsList }) {
 
 		let isFindCar
 		if (brand && year) {
-			isFindCar = car.brand.toLowerCase() === brand.toLowerCase() && car.year === parseInt(year)
+			isFindCar = car.brand.toLowerCase() === brand.toLowerCase() &&
+				car.year === parseInt(year)
 		} else if (!brand) {
 			isFindCar = car.year === parseInt(year)
 		} else isFindCar = car.brand.toLowerCase() === brand.toLowerCase()
@@ -42,8 +43,12 @@ function SearchCars({ carsList }) {
 	}
 
 	const createListCars = () => {
-		const items = carsList.filter(filterList).sort(sortStrings).map(({ id, brand, year, price }) =>
-			<li key={id} className="search-car-list-item">{`${brand} - ${year} y. - ${price}$`}</li>)
+		const items = [...carsList].filter(filterList)
+			.sort(sortStrings).map(({ id, brand, year, price }) => (
+				<li key={id} className="search-car-list-item">
+					{`${brand} - ${year} y. - ${price}$`}
+				</li>
+			))
 
 		if (!items.length)
 			return <div className="info">Nothing was found!</div>
@@ -58,23 +63,35 @@ function SearchCars({ carsList }) {
 				<div className="search-car-body body-block">
 					<div className="search-car-row">
 						<div className="search-car-column">
-							<div className="search-car-label">Brand</div>
-							<select value={brand} name="mark-car" id="mark-car" className="search-car-select select" onChange={handleBrandChange}>
+							<div className="search-car-label label">Brand</div>
+							<select
+								value={brand}
+								name="mark-car"
+								id="mark-car"
+								className="search-car-select select"
+								onChange={handleBrandChange}>
 								<option value="">Chose brand</option>
-								{createOptionsList('brand', 'string').map(({ id, brand }) =>
-									<option key={id} value={brand}>{brand}</option>)}
+								{createOptionsList('brand', 'string').map(({ id, brand }) => (
+									<option key={id} value={brand}>{brand}</option>
+								))}
 							</select>
 						</div>
 						<div className="search-car-column">
-							<div className="search-car-label">Release date</div>
-							<select value={year} name="year-car" id="year-car" className="search-car-select select" onChange={handleYearChange}>
+							<div className="search-car-label label">Release date</div>
+							<select
+								value={year}
+								name="year-car"
+								id="year-car"
+								className="search-car-select select"
+								onChange={handleYearChange}>
 								<option value="">Chose year</option>
-								{createOptionsList('year', 'number').map(({ id, year }) =>
-									<option key={id} value={year}>{year}</option>)}
+								{createOptionsList('year', 'number').map(({ id, year }) => (
+									<option key={id} value={year}>{year}</option>
+								))}
 							</select>
 						</div>
 					</div>
-					<h3 className="search-car-label">Cars</h3>
+					<h3 className="search-car-label label">Cars</h3>
 					{createListCars()}
 				</div>
 			</div>

@@ -16,7 +16,7 @@
 		opacity: 0.6;
 	}
 	@media (any-hover: hover) {
-		&:not(:disabled):hover {
+		&:not(:disabled, .-selected, .-mistake, .-correct):hover {
 			background-color: rgba(218, 197, 167, 0.75);
 		}
 	}
