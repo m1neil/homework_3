@@ -6,6 +6,7 @@ import Speedometer from './Speedometer'
 import Thermometer from './Thermometer'
 import DynamicSearch from './DynamicSearch'
 import SearchCars from './SearchCars'
+import Translator from './Translator'
 import {
 	cells,
 	listCandidates,
@@ -15,7 +16,6 @@ import {
 	cars,
 	words
 } from '../data';
-import Translator from './Translator/Translator'
 
 function App() {
 	return (
