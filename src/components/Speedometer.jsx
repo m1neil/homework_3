@@ -41,6 +41,11 @@ function Speedometer() {
 	return (
 		<section className="speedometer">
 			<div className="speedometer-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 3. Вводиться дозволена швидкість і поточна швидкість авто. Якщо не введено дозволену швидкість, то елемент введення поточної швидкості заблокований. Якщо швидкість менше 50% дозволеної, то колір input – оранжевий, якщо від 50% до 100% - зелений, вище 100% - червоний. Якщо значення вище 90% починає блимати повідомлення «Увага!»
+					</h2>
+				</div>
 				<h2 className="speedometer-title title">Speedometer</h2>
 				<div className="speedometer-body body-block">
 					<div className="speedometer-row">

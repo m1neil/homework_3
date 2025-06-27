@@ -69,3 +69,20 @@ export const words = [
 	{ id: 3, en: 'human', ua: 'людина' },
 	{ id: 4, en: 'boy', ua: 'хлопець' },
 ]
+
+export const products = [
+	{ id: 1, name: "Телефони" },
+	{ id: 2, name: "Телевізори" },
+	{ id: 3, name: "Мікрохвильові печі" },
+	{ id: 4, name: "Пральні машини" },
+	{ id: 5, name: "Фени" },
+	{ id: 6, name: "Чайники" },
+]
+
+export const stores = [
+	{ id: 1, name: "Головне", selectedProductIds: [] },
+	{ id: 2, name: "Оптовий", selectedProductIds: [] },
+	{ id: 3, name: "Магазин 1", selectedProductIds: [] },
+	{ id: 4, name: "Магазин 2", selectedProductIds: [] },
+	{ id: 5, name: "Магазин 3", selectedProductIds: [] },
+]

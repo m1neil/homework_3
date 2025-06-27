@@ -59,6 +59,11 @@ function SearchCars({ carsList }) {
 	return (
 		<div className="search-car">
 			<div className="search-car-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 8. Дано список автомобілів (марка, рік випуску, ціна). Сформувати елементи для фільтрування з використанням випадаючого списку (контент цих випадаючих списків сформувати у залежності від переданого списку).
+					</h2>
+				</div>
 				<h2 className="search-car-title title">Search Cars</h2>
 				<div className="search-car-body body-block">
 					<div className="search-car-row">

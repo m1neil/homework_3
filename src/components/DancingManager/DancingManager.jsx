@@ -67,6 +67,11 @@ function DancingManager({ boys, girls }) {
 	return (
 		<div className="dancing">
 			<div className="dancing-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 6. Пари для танців. Поступово вибираємо хлопця, дівчину і додаємо у обрані пари. Пару можна видалити. Поки не вибрано хлопця і дівчину кнопка «Додати» заблокована.  Якщо не вистачає хлопців або дівчат вибір також блокується.
+					</h2>
+				</div>
 				<h2 className="dancing-title title">Dancing manager</h2>
 				<div className="dancing-body body-block">
 					<div className="dancing-row">

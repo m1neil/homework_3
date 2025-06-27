@@ -1,6 +1,7 @@
 @use "../includes/" as *;
 
 .competition {
+	padding-block: toRem(25);
 	&-container {
 	}
 	&-title {

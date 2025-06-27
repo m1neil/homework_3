@@ -40,6 +40,11 @@ function DynamicSearch({ employees }) {
 	return (
 		<div className="dynamic-search">
 			<div className="dynamic-search-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 7. Динамічний пошук. Є список працівників і поле пошуку. При введенні відображаються усі, які містять вказаний фрагмент
+					</h2>
+				</div>
 				<h2 className="dynamic-search-title title">Dynamic search</h2>
 				<div className="dynamic-search-body body-block">
 					<div className="dynamic-search-form form">

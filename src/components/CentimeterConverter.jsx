@@ -16,6 +16,11 @@ function CentimeterConverter() {
 	return (
 		<section className="converter">
 			<div className="converter-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 1. З клавіатури вводиться довжина у сантиметрах. Виводити скільки це метрів, кілометрів.
+					</h2>
+				</div>
 				<h2 className="converter-title title">Converter centimeters</h2>
 				<div className="converter-body body-block">
 					<input

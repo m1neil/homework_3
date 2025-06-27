@@ -27,6 +27,17 @@ function Thermometer() {
 	return (
 		<section className="thermometer">
 			<div className="thermometer-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 2. З клавіатури вводиться температура. Змінювати колір фону у залежності від значення:
+					</h2>
+					<ul className="task-list">
+						<li className="task-list-item">менше нуля – білий</li>
+						<li className="task-list-item">від 0 до 10 – синій</li>
+						<li className="task-list-item">від 11 до 22 – зелений</li>
+						<li className="task-list-item">вище 22 – червоний</li>
+					</ul>
+				</div>
 				<h2 className="thermometer-title title">Thermometer</h2>
 				<div className={`thermometer-body body-block ${getClassStyle()}`}>
 					<input

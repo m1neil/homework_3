@@ -1,0 +1,17 @@
+@use "../includes/" as *;
+
+.tabs {
+	&-container {
+	}
+	&-nav {
+		padding-block-start: toRem(25);
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(15);
+	}
+	&-title {
+		&.-active {
+			opacity: 0.7;
+		}
+	}
+}

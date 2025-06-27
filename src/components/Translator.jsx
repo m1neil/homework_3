@@ -57,12 +57,6 @@ function Translator({ words }) {
 		return <ul className="translator-list">{items}</ul>
 	}
 
-	function transformWords(key, words) {
-		return words.map(word => (
-			{ id: word.id, [key]: word[key] }
-		))
-	}
-
 	const getClassButton = (key, idWord) => {
 		const idSelectedWord = selectedWords[key]
 		if (idSelectedWord === undefined) return ''
@@ -101,9 +95,20 @@ function Translator({ words }) {
 		return newWords
 	}
 
+	function transformWords(key, words) {
+		return words.map(word => (
+			{ id: word.id, [key]: word[key] }
+		))
+	}
+
 	return (
 		<div className="translator">
 			<div className="translator-container">
+				<div className="task">
+					<h2 className="task-title">
+						Задача 9. Перекладач. Користувачу виводять змішані картки з словами на англійській і українській мові. Користувач поступово клікає на картки (виділяємо синьою рамкою). Якщо знайдено правильні пари карток, що відповідають одному слову, то видаляємо ці картки. Інакше - виділяємо червоною рамкою і через секунду забираємо рамку.
+					</h2>
+				</div>
 				<h2 className="translator-title title">Translator</h2>
 				<div className="translator-body body-block">
 					<div className="translator-label label">Find a pair of words</div>

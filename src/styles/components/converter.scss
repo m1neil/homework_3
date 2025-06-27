@@ -1,7 +1,7 @@
 @use "../includes/" as *;
 
 .converter {
-	padding-block: toRem(50) toRem(25);
+	padding-block: toRem(25);
 	&-title {
 		&:not(:last-child) {
 			margin-bottom: toRem(30);

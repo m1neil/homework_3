@@ -1,0 +1,34 @@
+@use "../includes/" as *;
+
+.task {
+	padding-block-end: toRem(20);
+	&-title {
+		font-size: toRem(22);
+		color: $accentColor;
+		line-height: 1.4;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&-list {
+		font-size: toRem(17);
+	}
+	&-list-item {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(10);
+		line-height: 1.4;
+		&::before {
+			content: "";
+			width: toRem(6);
+			aspect-ratio: 1;
+			border-radius: 50%;
+			background-color: $accentColor;
+			flex-shrink: 0;
+			transform: translateY(toRem(1));
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+}
