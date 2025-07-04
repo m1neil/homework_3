@@ -12,7 +12,11 @@ function Translator({ words }) {
 	useEffect(() => {
 		const idUaWord = selectedWords[KEY_UA]
 		const idEnWord = selectedWords[KEY_EN]
-		if (idUaWord === undefined || idEnWord === undefined) return
+		
+		if (
+			idUaWord === undefined ||
+			idEnWord === undefined
+		) return
 
 		const isCorrect = idUaWord === idEnWord
 		setIsCorrectAnswer(isCorrect)

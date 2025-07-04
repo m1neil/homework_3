@@ -37,8 +37,15 @@ function CompetitionManager({ listCandidates = [] }) {
 	}
 
 	const moveToSelected = (element, setCandidateInList, removeCandidateFromList) => {
-		setCandidateInList(prevCandidateList => [...prevCandidateList, { ...element }].sort(sortList))
-		removeCandidateFromList(prevCandidateList => prevCandidateList.filter(candidate => candidate.id !== element.id))
+		setCandidateInList(prevCandidateList => (
+			[
+				...prevCandidateList,
+				{ ...element }
+			].sort(sortList)
+		))
+		removeCandidateFromList(prevCandidateList => (
+			prevCandidateList.filter(candidate => candidate.id !== element.id)
+		))
 	}
 
 	function sortList(a, b) {

@@ -34,7 +34,7 @@ function Speedometer() {
 
 	let contentWarning
 	if (speedPercent && speedPercent > 90)
-		contentWarning = <div className="warning">Attention!!!</div>
+		contentWarning = <div className="warning warning-blink">Attention!!!</div>
 	else contentWarning = null
 
 
